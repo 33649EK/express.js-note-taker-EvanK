@@ -1,7 +1,7 @@
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
 // Reads existing content and adds incoming note to json file.
-const readAndAppend = (content, file) => {
+const addNote = (content, file) => {
   // Reads existing notes from json file.
   fs.readFile(file, "utf8", (err, data) => {
     if (err) {
@@ -23,7 +23,8 @@ const readAndAppend = (content, file) => {
   });
 };
 
-const readAndDelete = (id, file) => {
+// Reads existing content and deletes note with matching id.
+const deleteNote = (id, file) => {
   fs.readFile(file, "utf8", (err, data) => {
     if (err) {
       console.log(err);
@@ -41,4 +42,5 @@ const readAndDelete = (id, file) => {
   });
 };
 
-module.exports = { readAndAppend, readAndDelete };
+// Exports functions for use in server.js.
+module.exports = { addNote, deleteNote };

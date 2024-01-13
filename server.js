@@ -24,14 +24,14 @@ app.post("/api/notes", (req, res) => {
   const newNote = req.body;
   console.log(newNote);
   res.json(newNote);
-  helpers.readAndAppend(newNote, "./db/db.json");
+  helpers.addNote(newNote, "./db/db.json");
 });
 
 app.delete("/api/notes/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
   res.send("Note deleted");
-  helpers.readAndDelete(id, "./db/db.json");
+  helpers.deleteNote(id, "./db/db.json");
 });
 
 // Start the server
