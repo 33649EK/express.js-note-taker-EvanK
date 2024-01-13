@@ -12,7 +12,9 @@ const addNote = (content, file) => {
       const parsedData = JSON.parse(data);
       // Adds a unique id to note.
       content.id = uuidv4();
+      // Pushes new note to existing notes.
       parsedData.push(content);
+      // Writes new data to json file.
       fs.writeFile(file, JSON.stringify(parsedData, null, 4), (err) => {
         if (err) {
           console.log(err);
@@ -30,8 +32,11 @@ const deleteNote = (id, file) => {
     if (err) {
       console.log(err);
     } else {
+      // Parses existing data.
       const parsedData = JSON.parse(data);
+      // Filters out note with matching id.
       const appendedData = parsedData.filter((note) => note.id !== id);
+      // Writes new data to json file.
       fs.writeFile(file, JSON.stringify(appendedData, null, 4), (err) => {
         if (err) {
           console.log(err);

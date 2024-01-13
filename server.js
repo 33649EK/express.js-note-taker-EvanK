@@ -16,10 +16,12 @@ app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "public/notes.html"))
 );
 
+// Fetches existing notes for display in application
 app.get("/api/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "./db/db.json"));
 });
 
+// Add a note
 app.post("/api/notes", (req, res) => {
   const newNote = req.body;
   console.log(newNote);
@@ -27,6 +29,7 @@ app.post("/api/notes", (req, res) => {
   helpers.addNote(newNote, "./db/db.json");
 });
 
+// Delete a note
 app.delete("/api/notes/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
