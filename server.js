@@ -24,7 +24,7 @@ app.post("/api/notes", (req, res) => {
   const newNote = req.body;
   console.log(newNote);
   res.json(newNote);
-  res.send("Note added");
+  // res.send("Note added");
   helpers.readAndAppend(newNote, "./db/db.json");
 });
 
