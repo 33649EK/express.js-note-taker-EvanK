@@ -1,10 +1,7 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
         "title": "New title",
-        "text": "New new text"
+        "text": "New new text",
+        "id": "fdd82e00-8def-4b7f-9860-242539fa1040"
     }
 ]

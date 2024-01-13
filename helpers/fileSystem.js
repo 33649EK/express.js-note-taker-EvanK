@@ -1,5 +1,5 @@
 const fs = require("fs");
-
+const { v4: uuidv4 } = require("uuid");
 // Reads existing content and adds incoming note to json file.
 const readAndAppend = (content, file) => {
   // Reads existing notes from json file.
@@ -9,6 +9,8 @@ const readAndAppend = (content, file) => {
     } else {
       // Adds incoming note to json file.
       const parsedData = JSON.parse(data);
+      // Adds a unique id to note.
+      content.id = uuidv4();
       parsedData.push(content);
       fs.writeFile(file, JSON.stringify(parsedData, null, 4), (err) => {
         if (err) {
@@ -37,6 +39,12 @@ const readAndDelete = (id, file) => {
       });
     }
   });
+};
+
+const addId = (content) => {
+  const updatedContent = content;
+  updatedContent.id = uuidv4();
+  return updatedContent;
 };
 
 module.exports = { readAndAppend, readAndDelete };
