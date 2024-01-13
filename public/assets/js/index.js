@@ -1,5 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
-
+const noteId = require("./helper.js");
 let noteForm;
 let noteTitle;
 let noteText;
@@ -76,7 +75,7 @@ const renderActiveNote = () => {
 
 const handleNoteSave = () => {
   const newNote = {
-    id: uuidv4(),
+    id: noteId(),
     title: noteTitle.value,
     text: noteText.value,
   };

@@ -1,12 +1,4 @@
 const fs = require("fs");
-const util = require("util");
-
-const readFileAsync = util.promisify(fs.readFile);
-
-const writeToFile = (destination, content) =>
-  fs.writeFile(destination, JSON.stringify(content, null, 4), (err) =>
-    err ? console.error(err) : console.info(`Data written to ${destination}`)
-  );
 
 // Reads existing content and adds incoming note to json file.
 const readAndAppend = (content, file) => {
@@ -47,4 +39,4 @@ const readAndDelete = (id, file) => {
   });
 };
 
-module.exports = { readFileAsync, writeToFile, readAndAppend, readAndDelete };
+module.exports = { readAndAppend, readAndDelete };
