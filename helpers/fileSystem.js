@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { v4: uuidv4 } = require("uuid");
+
 // Reads existing content and adds incoming note to json file.
 const addNote = (content, file) => {
   // Reads existing notes from json file.
