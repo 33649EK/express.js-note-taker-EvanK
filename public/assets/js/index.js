@@ -1,4 +1,4 @@
-const noteId = require("/helper.js");
+const noteId = require("helper.js");
 let noteForm;
 let noteTitle;
 let noteText;
