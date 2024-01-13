@@ -41,10 +41,4 @@ const readAndDelete = (id, file) => {
   });
 };
 
-const addId = (content) => {
-  const updatedContent = content;
-  updatedContent.id = uuidv4();
-  return updatedContent;
-};
-
 module.exports = { readAndAppend, readAndDelete };
