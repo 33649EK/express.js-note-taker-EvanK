@@ -1,6 +1,6 @@
 # Evan's Note Taker [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]
 
-A heroku application that allows user to create and delete notes.
+A heroku application that allows user to create and delete notes. The application can be found at https://evans-note-taker-e36b3bdc7b5e.herokuapp.com/
 
 ## Table of Contents
 
