@@ -34,7 +34,8 @@ N/A
 ## Credits
 
 Evan Keller
-Helper functions in fileSystem.js initially taken from solved mini project, before being modified.
+Helper functions in fileSystem.js initially taken from solved Module-11 mini project, before being modified.
+ChatGPT rewrote usage section of README to make it more readable.
 
 ## License
 
