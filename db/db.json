@@ -1,11 +1,9 @@
 [
     {
-        "id": "1",
         "title": "Test Title",
         "text": "Test text"
     },
     {
-        "id": "4",
         "title": "New title",
         "text": "New new text"
     }
